@@ -29,6 +29,19 @@
     height: 30px;
     width: auto;
   }
+
+  .logo-dark {
+    display: none;
+  }
+
+  [data-theme='dark'] & {
+    .logo-light {
+      display: none;
+    }
+    .logo-dark {
+      display: block;
+    }
+  }
 }
 
 // Mobile toggle button
@@ -113,8 +126,8 @@
     > a {
       display: block;
       padding: 12px 0;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: $fs-body;
+      font-weight: $font-weight-medium;
       color: $color-heading;
       transition: $transition;
 

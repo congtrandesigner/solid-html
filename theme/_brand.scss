@@ -1,0 +1,55 @@
+.brands {
+  padding: 40px 0;
+  background-color: $color-footer-bg;
+  transition: $transition;
+
+  [data-theme='dark'] & {
+    background-color: $color-bg-dark;
+  }
+}
+
+.brands-row {
+  @include flex(center, center);
+  flex-wrap: wrap;
+  gap: 3.125rem;
+
+  @include breakpoint-up(lg) {
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint-up(xl) {
+    gap: 7.25rem;
+  }
+}
+
+.brands-item {
+  @include flex(center, center);
+  opacity: 0.6;
+  transition: $transition;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    height: 26px;
+    width: auto;
+
+    @include breakpoint-up(md) {
+      height: 32px;
+    }
+  }
+
+  .logo-dark {
+    display: none;
+  }
+
+  [data-theme='dark'] & {
+    .logo-light {
+      display: none;
+    }
+    .logo-dark {
+      display: block;
+    }
+  }
+}

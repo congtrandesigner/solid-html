@@ -23,7 +23,7 @@ $header-height: 80px;
 $bp-sm: 576px;
 $bp-md: 768px;
 $bp-lg: 992px;
-$bp-xl: 1200px;
+$bp-xl: 1280px;
 
 // Footer
 $color-footer-bg: #f8f9fc;
@@ -33,3 +33,16 @@ $color-footer-border: $color-border;
 // Misc
 $transition: all 0.3s ease-in-out;
 $radius: 6px;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-extrabold: 800;
+
+// Font sizes
+$fs-body: 1rem; // ~16px
+$fs-small: 0.875rem; // ~14px
+
+// Radius scale (in addition to $radius above)
+$radius-md: 8px;

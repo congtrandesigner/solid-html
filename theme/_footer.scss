@@ -36,6 +36,19 @@
       height: 26px;
       width: auto;
     }
+
+    .logo-dark {
+      display: none;
+    }
+
+    [data-theme='dark'] & {
+      .logo-light {
+        display: none;
+      }
+      .logo-dark {
+        display: block;
+      }
+    }
   }
 
   p {
@@ -53,14 +66,14 @@
 
   &-label {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
 
   &-email {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: $font-weight-semibold;
     color: $color-heading;
 
     [data-theme='dark'] & {
@@ -75,8 +88,8 @@
 
 .footer-links {
   h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: $fs-body;
+    font-weight: $font-weight-semibold;
     color: $color-heading;
     margin-bottom: 20px;
 
@@ -101,8 +114,8 @@
 
 .footer-newsletter {
   h4 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: $fs-body;
+    font-weight: $font-weight-semibold;
     color: $color-heading;
     margin-bottom: 12px;
 
@@ -124,7 +137,7 @@
   input {
     width: 100%;
     padding: 14px 50px 14px 20px;
-    font-size: 14px;
+    font-size: $fs-small;
     color: $color-heading;
     background-color: $color-white;
     border: 1px solid $color-footer-border;
@@ -201,7 +214,7 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: $fs-small;
     order: -1;
 
     @include breakpoint-up(md) {
@@ -220,7 +233,7 @@
   }
 
   a {
-    font-size: 14px;
+    font-size: $fs-small;
     transition: $transition;
 
     &:hover {
@@ -244,15 +257,11 @@
 
   a {
     color: #c2c4d6;
+    font-size: 18px;
     transition: $transition;
 
     [data-theme='dark'] & {
       color: #4b4e68;
-    }
-
-    svg {
-      width: 18px;
-      height: 18px;
     }
 
     &:hover {
@@ -265,7 +274,7 @@
   @include flex(center, center);
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  border-radius: $radius-md;
   background-color: $color-primary;
   color: $color-white;
   transition: $transition;

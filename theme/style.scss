@@ -3,6 +3,8 @@
 @import "component";
 @import "header";
 @import "hero";
+@import "brand";
+@import "features";
 @import "footer";
 
 * {
@@ -17,7 +19,7 @@ html {
 
 body {
   font-family: $font-primary;
-  font-size: 16px;
+  font-size: $fs-body;
   color: $color-text;
   line-height: 1.6;
   background-color: $color-white;
