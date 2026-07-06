@@ -1,0 +1,35 @@
+// Fonts
+$font-primary: 'Inter', sans-serif;
+
+// Colors
+$color-primary: #4a6cf7;
+$color-primary-dark: #3b5cdb;
+$color-heading: #1d2144;
+$color-text: #637381;
+$color-white: #ffffff;
+$color-border: #e7e7e7;
+
+// Dark mode colors
+$color-bg-dark: #171826;
+$color-heading-dark: #f5f6f7;
+$color-text-dark: #b8b9c4;
+$color-border-dark: #2e3148;
+
+// Layout
+$container-width: 1170px;
+$header-height: 80px;
+
+// Breakpoints
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+// Footer
+$color-footer-bg: #f8f9fc;
+$color-footer-text: $color-text;
+$color-footer-border: $color-border;
+
+// Misc
+$transition: all 0.3s ease-in-out;
+$radius: 6px;

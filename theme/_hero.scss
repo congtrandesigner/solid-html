@@ -1,0 +1,161 @@
+.hero {
+  padding: 60px 0;
+  overflow: hidden;
+
+  @include breakpoint-up(lg) {
+    padding: 100px 0;
+  }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 40px;
+
+  @include breakpoint-up(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 400;
+  color: $color-text;
+
+  [data-theme='dark'] & {
+    color: $color-text-dark;
+  }
+}
+
+.hero-title {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: $color-heading;
+  margin-bottom: 20px;
+
+  [data-theme='dark'] & {
+    color: $color-heading-dark;
+  }
+
+  @include breakpoint-up(md) {
+    font-size: 48px;
+  }
+
+  @include breakpoint-up(lg) {
+    font-size: 58px;
+  }
+}
+
+.hero-title-highlight {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #2dd4bf;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.hero-desc {
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 480px;
+
+  [data-theme='dark'] & {
+    color: $color-text-dark;
+  }
+}
+
+.hero-actions {
+  .btn-hero {
+    padding: 16px 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 999px;
+    background-color: $color-heading;
+    color: $color-white;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+}
+
+.hero-image {
+  position: relative;
+
+  img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px -20px rgba(29, 33, 68, 0.25);
+  }
+}
+
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(74, 108, 247, 0.1), transparent 65%);
+  z-index: 0;
+}
+
+.hero-shape {
+  position: absolute;
+  z-index: 2;
+  border: 3px solid #2dd4bf;
+
+  &.is-diamond {
+    top: 22%;
+    left: -6%;
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+  }
+
+  &.is-triangle {
+    bottom: 30%;
+    left: -4%;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-right: 18px solid #2dd4bf;
+    transform: rotate(-10deg);
+  }
+}
+
+.hero-sparkle {
+  position: absolute;
+  z-index: 2;
+  color: #2563eb;
+  line-height: 1;
+
+  &.is-lg {
+    bottom: 8%;
+    right: 4%;
+    font-size: 28px;
+  }
+
+  &.is-sm {
+    bottom: -2%;
+    right: 12%;
+    font-size: 16px;
+  }
+}

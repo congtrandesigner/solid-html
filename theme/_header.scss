@@ -1,0 +1,251 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+  transition: $transition;
+
+  [data-theme='dark'] & {
+    background-color: $color-bg-dark;
+    border-bottom-color: $color-border-dark;
+  }
+}
+
+.navbar {
+  @include flex(space-between, center);
+  height: $header-height;
+  position: relative;
+}
+
+// Logo
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 30px;
+    width: auto;
+  }
+}
+
+// Mobile toggle button
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-heading;
+    transition: $transition;
+
+    [data-theme='dark'] & {
+      background-color: $color-heading-dark;
+    }
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  @include breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+// Menu
+.navbar-menu {
+  @include flex(center, center);
+  gap: 32px;
+
+  @include breakpoint-down(lg) {
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-border;
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition;
+
+    [data-theme='dark'] & {
+      background-color: $color-bg-dark;
+      border-bottom-color: $color-border-dark;
+    }
+
+    &.active {
+      max-height: 500px;
+    }
+  }
+
+  > li {
+    position: relative;
+    width: 100%;
+
+    @include breakpoint-up(lg) {
+      width: auto;
+    }
+
+    > a {
+      display: block;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-heading;
+      transition: $transition;
+
+      @include breakpoint-down(lg) {
+        padding: 12px 24px;
+        width: 100%;
+      }
+
+      [data-theme='dark'] & {
+        color: $color-heading-dark;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+// Dropdown ("Pages")
+.has-dropdown {
+  > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+  }
+
+  .dropdown {
+    @include breakpoint-up(lg) {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      min-width: 200px;
+      background-color: $color-white;
+      border: 1px solid $color-border;
+      border-radius: $radius;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: $transition;
+
+      [data-theme='dark'] & {
+        background-color: $color-bg-dark;
+        border-color: $color-border-dark;
+      }
+    }
+
+    @include breakpoint-down(lg) {
+      display: none;
+      padding-left: 16px;
+    }
+
+    li a {
+      padding: 10px 20px;
+
+      @include breakpoint-down(lg) {
+        padding: 10px 24px;
+      }
+    }
+  }
+
+  @include breakpoint-up(lg) {
+    &:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &.active .dropdown {
+    @include breakpoint-down(lg) {
+      display: block;
+    }
+  }
+}
+
+// Right side actions
+.navbar-actions {
+  @include flex(flex-end, center);
+  gap: 16px;
+}
+
+.theme-toggle {
+  @include flex(center, center);
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: $color-heading;
+
+  [data-theme='dark'] & {
+    color: $color-heading-dark;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-moon {
+    display: none;
+  }
+
+  [data-theme='dark'] & {
+    .icon-sun {
+      display: none;
+    }
+    .icon-moon {
+      display: block;
+    }
+  }
+}
+
+.navbar-actions {
+  .btn-signin {
+    display: none;
+    color: $color-heading;
+
+    [data-theme='dark'] & {
+      color: $color-heading-dark;
+    }
+
+    @include breakpoint-up(md) {
+      display: inline-block;
+    }
+  }
+}

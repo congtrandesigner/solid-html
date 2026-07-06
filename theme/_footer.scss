@@ -1,0 +1,281 @@
+.footer {
+  background-color: $color-footer-bg;
+  color: $color-footer-text;
+  padding: 60px 0 0;
+  border-top: 1px solid $color-footer-border;
+  transition: $transition;
+
+  [data-theme='dark'] & {
+    background-color: $color-bg-dark;
+    color: $color-text-dark;
+    border-top-color: $color-border-dark;
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 50px;
+
+  @include breakpoint-up(md) {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  @include breakpoint-up(lg) {
+    grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  }
+}
+
+.footer-about {
+  .footer-logo {
+    display: inline-flex;
+    margin-bottom: 20px;
+
+    img {
+      height: 26px;
+      width: auto;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 320px;
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  &-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &-email {
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-heading;
+
+    [data-theme='dark'] & {
+      color: $color-heading-dark;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-links {
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-heading;
+    margin-bottom: 20px;
+
+    [data-theme='dark'] & {
+      color: $color-heading-dark;
+    }
+  }
+
+  ul li {
+    margin-bottom: 12px;
+  }
+
+  a {
+    font-size: 15px;
+    transition: $transition;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-newsletter {
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-heading;
+    margin-bottom: 12px;
+
+    [data-theme='dark'] & {
+      color: $color-heading-dark;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+}
+
+.footer-form {
+  position: relative;
+  max-width: 280px;
+
+  input {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    font-size: 14px;
+    color: $color-heading;
+    background-color: $color-white;
+    border: 1px solid $color-footer-border;
+    border-radius: 999px;
+    transition: $transition;
+
+    [data-theme='dark'] & {
+      color: $color-heading-dark;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: $color-border-dark;
+    }
+
+    &::placeholder {
+      color: $color-footer-text;
+
+      [data-theme='dark'] & {
+        color: $color-text-dark;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: $color-footer-text;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+
+    [data-theme='dark'] & {
+      color: $color-text-dark;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+  border-top: 1px solid $color-footer-border;
+  text-align: center;
+  transition: $transition;
+
+  [data-theme='dark'] & {
+    border-top-color: $color-border-dark;
+  }
+
+  @include breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    text-align: left;
+  }
+
+  p {
+    font-size: 14px;
+    order: -1;
+
+    @include breakpoint-up(md) {
+      order: 0;
+      text-align: center;
+    }
+  }
+}
+
+.footer-bottom-links {
+  @include flex(center, center);
+  gap: 24px;
+
+  @include breakpoint-up(md) {
+    justify-content: flex-start;
+  }
+
+  a {
+    font-size: 14px;
+    transition: $transition;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-bottom-right {
+  @include flex(center, center);
+  gap: 16px;
+
+  @include breakpoint-up(md) {
+    justify-content: flex-end;
+  }
+}
+
+.footer-social {
+  @include flex(center, center);
+  gap: 16px;
+
+  a {
+    color: #c2c4d6;
+    transition: $transition;
+
+    [data-theme='dark'] & {
+      color: #4b4e68;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.footer-top-btn {
+  @include flex(center, center);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: $transition;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}

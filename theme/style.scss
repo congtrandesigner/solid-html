@@ -1,0 +1,44 @@
+@import "variable";
+@import "mixin";
+@import "component";
+@import "header";
+@import "hero";
+@import "footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.6;
+  background-color: $color-white;
+  transition: $transition;
+
+  [data-theme='dark'] & {
+    background-color: $color-bg-dark;
+    color: $color-text-dark;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

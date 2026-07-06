@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solid - SaaS Boilerplate</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo-light.svg" alt="Solid" />
+        </a>
+
+        <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="navbar-menu" id="navbarMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li class="has-dropdown">
+            <a href="#">Pages</a>
+            <ul class="dropdown">
+              <li><a href="blog-grid.html">Blog Grid</a></li>
+              <li><a href="signin.html">Sign In</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="docs.html">Docs</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="404.html">404 Error</a></li>
+            </ul>
+          </li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+          </button>
+          <a href="signin.html" class="btn-signin">Sign In</a>
+          <a href="signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="features">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-badge">🔥 Solid - A Complete SaaS Starter Template for SaaS</span>
+          <h1 class="hero-title">
+            Robust SaaS Boilerplate and
+            Starter for <span class="hero-title-highlight">Next.js</span>
+          </h1>
+          <p class="hero-desc">
+            Packed with all the key integrations you need for swift SaaS startup launch, including
+            Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More.
+            Built with Next.js, React 18 and TypeScript.
+          </p>
+          <div class="hero-actions">
+            <a href="signup.html" class="btn btn-hero">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <span class="hero-glow"></span>
+          <span class="hero-shape is-diamond"></span>
+          <span class="hero-shape is-triangle"></span>
+          <span class="hero-sparkle is-lg">✦</span>
+          <span class="hero-sparkle is-sm">✦</span>
+          <img src="images/hero-light.svg" alt="Solid dashboard preview" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo-light.svg" alt="Solid" />
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div class="footer-contact">
+            <span class="footer-contact-label">Contact</span>
+            <a href="mailto:hello@solid.com" class="footer-contact-email">hello@solid.com</a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Press media</a></li>
+            <li><a href="blog.html">Our Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Subscribe to receive future updates</p>
+          <form class="footer-form">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 4.5v15l16-7.5-16-7.5Z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-links">
+          <a href="#">English</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Support</a>
+        </div>
+        <p>© 2026 Solid. All rights reserved</p>
+        <div class="footer-bottom-right">
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.25c0-.87.24-1.46 1.49-1.46H16.5V4.36C16.24 4.32 15.34 4.25 14.3 4.25c-2.17 0-3.66 1.32-3.66 3.75V10.5H8.1v3h2.54V21h2.86Z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.4-1.3 1.7-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.6 0-1.2-.2-1.8-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.2 8.2 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.6H3.9V20H6.9V8.6ZM5.4 4a1.7 1.7 0 1 0 0 3.5 1.7 1.7 0 0 0 0-3.5ZM20.1 20h-3V14.3c0-1.4-.5-2.3-1.7-2.3-.9 0-1.5.6-1.7 1.2-.1.2-.1.5-.1.8V20h-3s.1-10.4 0-11.4h3v1.6c.4-.6 1.1-1.5 2.8-1.5 2 0 3.6 1.3 3.6 4.2V20Z"/></svg>
+            </a>
+          </div>
+          <a href="#header" class="footer-top-btn" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 15l7-7 7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navbarMenu = document.getElementById('navbarMenu');
+
+    navbarToggle.addEventListener('click', () => {
+      const isActive = navbarMenu.classList.toggle('active');
+      navbarToggle.classList.toggle('active', isActive);
+      navbarToggle.setAttribute('aria-expanded', isActive);
+    });
+
+    document.querySelectorAll('.has-dropdown > a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          link.parentElement.classList.toggle('active');
+        }
+      });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
