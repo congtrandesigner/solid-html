@@ -897,6 +897,129 @@
   background-color: #3b5cdb;
 }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .two-column {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+}
+
+.two-column__image img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.two-column__content {
+  width: 100%;
+}
+
+.two-column--reverse .two-column__image {
+  order: 2;
+}
+.two-column--reverse .two-column__content {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .two-column--reverse .two-column__image,
+  .two-column--reverse .two-column__content {
+    order: unset;
+  }
+}
+
+/*================================================
+=            Integration Section
+================================================*/
+.integration-top, .integration-bot {
+  padding: 100px 0;
+}
+@media (min-width: 768px) {
+  .integration-top, .integration-bot {
+    padding: 80px 0;
+  }
+}
+@media (min-width: 992px) {
+  .integration-top, .integration-bot {
+    padding: 60px 0;
+  }
+}
+
+.integration-image img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.integration-content {
+  width: 100%;
+}
+
+.integration-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.integration-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.integration-number {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #e7e7e7;
+  background: #ffffff;
+  color: #1d2144;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.integration-body h4 {
+  color: #1d2144;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.integration-body p {
+  color: #637381;
+  line-height: 1.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.integration-item:hover .integration-number {
+  background: #4a6cf7;
+  color: #ffffff;
+  border-color: #4a6cf7;
+}
+
+/*=============================================
+=            Dark Theme
+=============================================*/
+[data-theme=dark] .integration-number {
+  background: #171826;
+  border-color: #2e3148;
+  color: #ffffff;
+}
+[data-theme=dark] .integration-body h4 {
+  color: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -932,4 +1055,4 @@ ul {
 img {
   max-width: 100%;
   display: block;
-}
+}/*# sourceMappingURL=style.css.map */
