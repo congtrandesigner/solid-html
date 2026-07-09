@@ -1,0 +1,81 @@
+.funtional-content{
+.funtional-tabs {
+    @include flex(space-around, center);
+    background-color:$color-white;
+    border-radius: $radius;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    padding: 10px 0;
+    width: 100%;
+    margin: 40px auto;
+    border-color: 1px solid $color-white;
+   
+    .funtional-nav-link {
+        @include flex(center, center);
+        flex: 1;
+        position: relative;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        .funtional-number {
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            text-align: center;
+            border: 1px solid $color-border;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-heading;
+        }
+        &.active::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 15%;
+        width: 70%;
+        height: 4px;
+        background-color: #007bff;
+        border-radius: 4px 4px 0 0;
+    }
+    }
+
+    
+    
+  
+}
+.funtional-title{
+        text-align: left;
+        .funtional-title-heading{
+            font-size: 30px;
+            font-weight: $font-weight-semibold;
+            color: $color-heading;
+        }
+    }
+
+}
+
+[data-theme="dark"] {
+
+    .funtional-tabs{
+        background-color: $color-bg-dark;
+        border:1px solid $color-border-dark !important;
+        .funtional-number {
+             background-color: $color-bg-dark;
+            border:1px solid $color-border-dark!important;
+            color: $color-white !important;
+        }
+    }
+
+
+    .funtional-title {
+
+        h2 {
+
+            color: $color-white !important;
+
+        }
+
+    }
+
+}

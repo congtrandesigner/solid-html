@@ -48,7 +48,7 @@
 }
 [data-theme=dark] .header {
   background-color: #171826;
-  border-bottom-color: #2e3148;
+  border-bottom-color: #1a1f35;
 }
 
 .navbar {
@@ -137,7 +137,7 @@
   }
   [data-theme=dark] .navbar-menu {
     background-color: #171826;
-    border-bottom-color: #2e3148;
+    border-bottom-color: #1a1f35;
   }
   .navbar-menu.active {
     max-height: 500px;
@@ -200,7 +200,7 @@
   }
   [data-theme=dark] .has-dropdown .dropdown {
     background-color: #171826;
-    border-color: #2e3148;
+    border-color: #1a1f35;
   }
 }
 @media (max-width: 991px) {
@@ -643,7 +643,7 @@
 [data-theme=dark] .footer {
   background-color: #171826;
   color: #b8b9c4;
-  border-top-color: #2e3148;
+  border-top-color: #1a1f35;
 }
 
 .footer-top {
@@ -761,7 +761,7 @@
 [data-theme=dark] .footer-form input {
   color: #f5f6f7;
   background-color: rgba(255, 255, 255, 0.05);
-  border-color: #2e3148;
+  border-color: #1a1f35;
 }
 .footer-form input::placeholder {
   color: #637381;
@@ -809,7 +809,7 @@
   transition: all 0.3s ease-in-out;
 }
 [data-theme=dark] .footer-bottom {
-  border-top-color: #2e3148;
+  border-top-color: #1a1f35;
 }
 @media (min-width: 768px) {
   .footer-bottom {
@@ -1013,11 +1013,77 @@
 =============================================*/
 [data-theme=dark] .integration-number {
   background: #171826;
-  border-color: #2e3148;
+  border-color: #1a1f35;
   color: #ffffff;
 }
 [data-theme=dark] .integration-body h4 {
   color: #ffffff;
+}
+
+.funtional-content .funtional-tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 10px 0;
+  width: 100%;
+  margin: 40px auto;
+  border-color: 1px solid #ffffff;
+}
+.funtional-content .funtional-tabs .funtional-nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.funtional-content .funtional-tabs .funtional-nav-link .funtional-number {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  border: 1px solid #e7e7e7;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d2144;
+}
+.funtional-content .funtional-tabs .funtional-nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 15%;
+  width: 70%;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 4px 4px 0 0;
+}
+.funtional-content .funtional-title {
+  text-align: left;
+}
+.funtional-content .funtional-title .funtional-title-heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1d2144;
+}
+
+[data-theme=dark] .funtional-tabs {
+  background-color: #171826;
+  border: 1px solid #1a1f35 !important;
+}
+[data-theme=dark] .funtional-tabs .funtional-number {
+  background-color: #171826;
+  border: 1px solid #1a1f35 !important;
+  color: #ffffff !important;
+}
+[data-theme=dark] .funtional-title h2 {
+  color: #ffffff !important;
 }
 
 * {
