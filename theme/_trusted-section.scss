@@ -1,5 +1,5 @@
 .trusted {
-    padding: 50px 0;
+    padding-top: 50px ;
     .trusted-content {
         position: relative;
         padding: 80px 20px;
@@ -36,7 +36,7 @@
 
         .img-wave {
             position: absolute;
-            bottom: 20px;
+            bottom: 40px;
             right: 40px;
             width: 150px;
             z-index: 3;
@@ -66,5 +66,15 @@
 
         }
     }
+
+    [data-theme='dark'] & {
+    h2,h3 {
+      color: $color-white;
+    }
+    .img-arr {
+      background-color:#292E45;
+      box-shadow: none;
+    }
+  }
 
 }

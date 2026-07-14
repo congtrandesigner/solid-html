@@ -1,10 +1,9 @@
 .two-column{
-
     display:grid;
     grid-template-columns: 1fr;
     gap:60px;
-    align-items:center;
-
+align-items:center;
+width:100%;
     @include breakpoint-up(lg){
 
      grid-template-columns: repeat(2, 1fr); 
@@ -16,29 +15,22 @@
 .two-column__image{
 
     img{
-
         width:100%;
         display:block;
         border-radius:$radius;
-
     }
 
 }
 
 .two-column__content{
-
     width:100%;
-
 }
 
 .two-column--reverse{
 
     .two-column__image{
-
         order:2;
-
     }
-
     .two-column__content{
 
         order:1;

@@ -1,0 +1,57 @@
+.our-faqs {
+    .our-faqs-content {
+       position: relative;
+        display: flex;
+        border-radius: 12px;
+        width: 100%;
+        .two-column {
+            position: absolute;
+            z-index: 4;
+
+            .our-faqs-title {
+                .section-title {
+                    text-align: left;
+
+                    h2 {
+                        font-size: 30px;
+                    }
+                }
+            }
+
+            .our-faqs-items {
+                text-align: right !important;
+                .accordion-item {
+                    margin-bottom: 3px;
+                    border-radius: 5px;
+
+                    .accordion-header {
+                        .accordion-button::after {
+                            display: none !important;
+                            /* Xóa bỏ icon mũi tên mặc định */
+                        }
+
+                        .accordion-button .icon-open {
+                            display: none;
+
+                        }
+
+                        .accordion-button .icon-close {
+                            display: inline-block;
+                        }
+
+                        .accordion-button.collapsed .icon-open {
+                            display: inline-block;
+                        }
+
+                        .accordion-button.collapsed .icon-close {
+
+                            display: none;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
