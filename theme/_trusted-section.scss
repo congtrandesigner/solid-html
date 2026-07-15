@@ -1,5 +1,6 @@
 .trusted {
-    padding-top: 50px ;
+    padding-top: 50px;
+
     .trusted-content {
         position: relative;
         padding: 80px 20px;
@@ -9,20 +10,22 @@
         min-height: 500px;
         border-radius: 12px;
 
-        .img-bg-grid-bot {
+        .div-bg-grid-bot {
             background-color: #E1E9FF;
             border-radius: $radius;
-            .img-bg-grid-top{ position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 1;
-            pointer-events: none;
-            z-index: 2;
-        }
-           
+
+            .img-bg-grid-top {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 1;
+                pointer-events: none;
+                z-index: 2;
+            }
+
         }
 
         .img-character {
@@ -31,7 +34,7 @@
             left: 40px;
             width: 220px;
             z-index: 3;
-            
+
         }
 
         .img-wave {
@@ -48,6 +51,19 @@
             text-align: center;
             max-width: 800px;
             color: $color-white;
+
+            h2 {
+                &.animated {
+                    animation: fadeInDown 1s ease-out both;
+                }
+            }
+
+            p {
+                &.animated {
+                    animation: fadeInDown 1s ease-out 0.3s both;
+                }
+            }
+
             .stats-container {
                 display: flex;
                 justify-content: space-around;
@@ -58,23 +74,46 @@
                     color: $color-heading;
                     font-weight: $font-weight-semibold;
                 }
+
                 p {
                     color: $color-text;
                     font-size: $fs-body;
                 }
-            }
 
+                .stat-item-one {
+                    &.animated {
+                        animation: fadeInDown 1s ease-out 0.4s both;
+                    }
+                }
+
+                .stat-item-two {
+                    &.animated {
+                        animation: fadeInDown 1s ease-out 0.6s both;
+                    }
+                }
+
+                .stat-item-three {
+                    &.animated {
+                        animation: fadeInDown 1s ease-out 0.8s both;
+                    }
+                }
+
+            }
         }
     }
 
-    [data-theme='dark'] & {
-    h2,h3 {
-      color: $color-white;
+
+[data-theme='dark'] & {
+
+    h2,
+    h3 {
+        color: $color-white;
     }
+
     .img-arr {
-      background-color:#292E45;
-      box-shadow: none;
+        background-color: #292E45;
+        box-shadow: none;
     }
-  }
+}
 
 }

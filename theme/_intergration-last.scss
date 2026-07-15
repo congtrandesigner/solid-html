@@ -9,9 +9,12 @@
         border-radius: 12px;
 
         .integration-last-title {
+            &.animated {
+                    animation: fadeInDown 1s ease-out both;
+                }
             position: absolute;
         }
-
+        
         // .integration-last-brand {
         //     position: absolute;
         .img-arr {
@@ -51,9 +54,16 @@
         border-radius: 16px;
         align-items: center;
 
-        .bottom-integration-title {}
+        .bottom-integration-title {
+            &.animated {
+                    animation: fadeInLeft 1s ease-out both;
+                }
+        }
 
         .bottom-integration-button {
+             &.animated {
+                    animation: fadeInRight 1s ease-out both;
+                }
             button {
                 background-color: $color-bg-dark;
                 color: $color-white;

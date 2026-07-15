@@ -1,42 +1,85 @@
 .our-faqs {
     .our-faqs-content {
-       position: relative;
+        position: relative;
         display: flex;
         border-radius: 12px;
         width: 100%;
+        height: auto;
+
         .two-column {
             position: absolute;
             z-index: 4;
 
             .our-faqs-title {
+
+                &.animated {
+                    animation: fadeInLeft 1s ease-out both;
+                }
+
                 .section-title {
-                    text-align: left;
+                    text-align: left !important;
+
+                    p {
+                        color: $color-bg-dark;
+                    }
 
                     h2 {
                         font-size: 30px;
                     }
+
                 }
+
+                .btn-web {
+                    color: black;
+                }
+
+                .btn-web:hover {
+                    color: blue;
+                }
+
             }
 
             .our-faqs-items {
                 text-align: right !important;
+                &.animated {
+                    animation: fadeInRight 1s ease-out both;
+
+                }
                 .accordion-item {
                     margin-bottom: 3px;
                     border-radius: 5px;
 
                     .accordion-header {
+                        h2 {
+                            font-size: 16px;
+
+                        }
+
                         .accordion-button::after {
                             display: none !important;
-                            /* Xóa bỏ icon mũi tên mặc định */
+                        }
+
+                        .accordion-button:not(.collapsed) {
+                            background-color: transparent !important;
+                            color: inherit !important;
+                            box-shadow: none !important;
+                        }
+
+                        .accordion-button:focus {
+                            box-shadow: none !important;
                         }
 
                         .accordion-button .icon-open {
                             display: none;
+                            font-size: 1.5rem;
+                            font-weight: 700;
 
                         }
 
                         .accordion-button .icon-close {
                             display: inline-block;
+                            font-size: 1.5rem;
+                            font-weight: 700;
                         }
 
                         .accordion-button.collapsed .icon-open {
@@ -49,9 +92,52 @@
                         }
                     }
 
+                    .accordion-body {
+                        text-align: left;
+                    }
+
                 }
 
             }
         }
     }
+
+    [data-theme='dark'] & {
+
+        .our-faqs-content{
+            background-color: $color-border-dark;
+        }
+    .h2 {
+      color: $color-white;
+    }
+    .bottom-integration-button button {
+     background-color: $color-white;
+     color: $color-heading;
+    }
+  }
+}
+
+
+.accordion-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+
+span.text-through {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+span.text-through::after {
+    position: absolute;
+    content: "";
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #FFEAC2;
+    opacity: 1;
+    z-index: -1;
 }

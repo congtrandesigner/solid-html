@@ -2,7 +2,7 @@
 =            Integration Section
 ================================================*/
 
-.integration-top,.integration-bot {
+.integration-One,.integration-Two {
 
     padding: 100px 0;
 
@@ -17,8 +17,14 @@
 }
 
 
+
+
 .integration-image {
 
+     &.animated {
+                    animation: fadeInLeft 1s ease-out both;
+
+                }
     img {
 
         width: 100%;
@@ -32,8 +38,15 @@
 }
 
 .integration-content {
+     &.animated {
+                    animation: fadeInRight 1s ease-out both;
+
+                }
 
     width: 100%;
+    span.text-through::after{
+        background-color: #ADFFF8;
+    }
 
 }
 
@@ -130,6 +143,22 @@
     }
 
 }
+.integration-Two {
+    .integration-Two-title{
+        .section-title{
+        text-align: left ;}
+    }
+}
+
+.integration-Two-title.animated {
+                    animation: fadeInLeft 1s ease-out both;
+
+                } 
+.integration-Two-image.animated {
+                    animation: fadeInRight 1s ease-out both;
+
+                } 
+
 
 /*=============================================
 =            Dark Theme
