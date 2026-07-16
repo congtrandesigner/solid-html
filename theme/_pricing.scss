@@ -1,0 +1,122 @@
+.pricing-content {
+    padding-bottom: 50px;
+
+    &.animated {
+        animation: fadeInDown 3s ease-out both;
+    }
+
+    .pricing-items {
+        display: flex;
+        gap: 40px;
+
+        .pricing-item {
+            flex: 1;
+            background-color: $color-white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+            &-price {
+                font-size: 24px;
+                font-weight: bold;
+                color: $color-heading;
+                margin-bottom: 24px;
+
+                .pricing-item-currency,
+                .pricing-item-amount {
+                    font-size: 40px;
+                }
+
+                .pricing-item-period {
+                    font-size: 16px;
+                    color: $color-text;
+                    font-weight: $font-weight-semibold;
+                }
+            }
+
+            &-title {
+                font-size: 28px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+
+            &-des {
+                color: $color-text;
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+            &-features {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 40px 0;
+            }
+
+            &-feature {
+                font-size: 16px;
+                color: $color-heading;
+                margin-bottom: 16px;
+
+                &-disabled {
+                    color: $color-text-dark;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        .pricing-item-two {
+            position: relative;
+            overflow: visible;
+
+            &::before {
+                content: "POPULAR";
+                position: absolute;
+                top: 0;
+                right: 30px;
+                background-color: $color-primary;
+                color: $color-white;
+                font-size: 11px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 120px;
+                border-radius: 0 0 12px 12px;
+                writing-mode: vertical-rl;
+                text-transform: uppercase;
+
+            }
+        }
+
+    }
+}
+
+[data-theme='dark'] {
+    .pricing-item {
+        background-color: $color-border-dark !important;
+        border: 1px solid #242b45;
+
+        .pricing-item-currency,
+        .pricing-item-amount {
+            color: $color-white;
+        }
+
+        .pricing-item-des {
+            color: $color-text-dark; 
+        }
+
+        .pricing-item-feature {
+            color: $color-text-dark;
+
+            &-disabled {
+                color: #4a5475;
+            }
+        }
+
+    }
+}
