@@ -104,9 +104,10 @@
 
 
 [data-theme='dark'] & {
+    .div-bg-grid-bot {
+            background-color: $color-border-dark;}
 
-    h2,
-    h3 {
+  .content-box .stats-container h3 {
         color: $color-white;
     }
 

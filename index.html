@@ -13,6 +13,15 @@
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
+  <!-- CAROUSEL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -213,7 +222,8 @@
       <div class=" two-column">
         <!-- Image -->
         <div class="integration-image two-column__image wow">
-          <img src="/images/about-light-01.webp" alt="Integration Image">
+          <img src="images/about-dark-01.webp" alt="Integration Image" class="img-dark">
+          <img src="images/about-light-01.webp" alt="Integration Image" class="img-light">
         </div>
         <!-- Content -->
         <div class="integration-content two-column__content wow">
@@ -308,13 +318,13 @@
             </p>
           </div>
           <a href="#" class="btn-web">
-              Know More <i class="las la-arrow-right ms-2"></i>
-            </a>
+            Know More <i class="las la-arrow-right ms-2"></i>
+          </a>
         </div>
         <!-- Image -->
         <div class="integration-Two-image two-column__image wow">
-
-          <img src="./images/about-light-02.svg" alt="Dashboard Preview">
+          <img src="./images/about-light-02.svg" alt="Dashboard Preview" class="img-light">
+          <img src="images/about-dark-02.svg" alt="Dashboard Preview" class="img-dark">
         </div>
       </div>
     </div>
@@ -394,7 +404,8 @@
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center justify-content-center">
-            <img src="images/features-light-01.webp" alt="Hình ảnh cố định" class="img-fluid rounded shadow">
+            <img src="images/features-light-01.webp" alt="Hình ảnh cố định" class="img-fluid rounded shadow img-light">
+            <img src="images/features-dark-01.svg" alt="Hình ảnh cố định" class="img-fluid rounded shadow img-dark">
           </div>
         </div>
       </div>
@@ -404,8 +415,10 @@
   <section class="trusted">
     <div class="container">
       <div class="trusted-content">
-        <div class="div-bg-grid-bot"><img src="./images/shape-dotted-light-02.svg" alt="Grid Background"
-            class="img-bg-grid-bot"></div>
+        <div class="div-bg-grid-bot">
+          <img src="./images/shape-dotted-light-02.svg" alt="Grid Background" class="img-bg-grid-bot img-light">
+          <img src="./images/shape-dotted-dark-02.svg" alt="Grid Background" class="img-bg-grid-bot img-dark">
+        </div>
 
         <img src="./images/shape-04.webp" alt="Character" class="img-character">
 
@@ -441,8 +454,10 @@
   <section class="integration-last">
     <div class="container">
       <div class="integration-last-content">
-        <div class="div-bg-grid-bot"><img src="./images/shape-dotted-light-02.svg" alt="Grid Background"
-            class="img-bg-grid-bot"></div>
+        <div class="div-bg-grid-bot">
+          <img src="./images/shape-dotted-light-02.svg" alt="Grid Background" class="img-bg-grid-bot img-light">
+          <img src="./images/shape-dotted-dark-02.svg" alt="Grid Background" class="img-bg-grid-bot img-dark">
+        </div>
         <div class="integration-last-title wow">
           <div class="section-title ">
             <span class="section-title-eyebrow">INTEGRATIONS</span>
@@ -509,15 +524,17 @@
 
     <div class="container">
       <div class="our-faqs-content">
-        <div class="img-bg-grid-bot"><img src="./images/shape-dotted-light-02.svg" alt="Grid Background"
-            class="img-bg-grid-bot"></div>
+        <div class="div-bg-grid-bot">
+          <img src="./images/shape-dotted-light-02.svg" alt="Grid Background" class="img-bg-grid-bot img-light">
+          <img src="./images/shape-dotted-dark-02.svg" alt="Grid Background" class="img-bg-grid-bot img-dark">
+        </div>
         <div class="two-column two-column--reverse">
           <!-- Content -title-->
           <div class="our-faqs-title two-column__content wow">
             <div class="section-title">
-              <p class=""> OUR FAQS </p>
+              <p> OUR FAQS </p>
               <h2 class="section-title-heading">
-                Frequently Asked<span class="text-through">Questions</span> 
+                Frequently Asked<span class="text-through">Questions</span>
               </h2>
             </div>
             <a href="#" class="btn-web">
@@ -537,7 +554,8 @@
                     <i class="las la-minus ms-auto icon-close"></i>
                   </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionFlushExample">
                   <div class="accordion-body">
                     <p class="section-title-desc">We provide digital experience services to startups and small
                       businesses.
@@ -592,6 +610,106 @@
 
   </section>
 
+  <section class="testimonials">
+    <div class="container">
+      <div class="testimonials-content">
+        <div class="section-title ">
+          <span class="section-title-eyebrow">TESTIMONIALS</span>
+          <h2 class="section-title-heading">Client’s Testimonials</h2>
+          <p class="section-title-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus.
+            Phasellus aliquam ante in maximus.
+          </p>
+        </div>
+        <div class="testimonials-items owl-carousel owl-theme">
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Devid Smith</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-01.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Jhon Abraham</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-02.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Devid Smith</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-01.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Jhon Abraham</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-02.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Devid Smith</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-01.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+          <div class="testimonials-item">
+            <div class="item-header">
+              <div class="item-header-title">
+                <h3>Jhon Abraham</h3>
+                <p>Founter @democompany</p>
+              </div>
+              <div class="img-item">
+                <img src="./images/user-02.webp" alt="">
+              </div>
+            </div>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor
+              lacus. Phasellus aliquam ante in maximus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
@@ -703,15 +821,36 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
 
-    <!-- WOW.JS -->
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
-        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
-<script>
-    new WOW().init();
-</script>
+  <!-- WOW.JS -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- CAROUSEL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      new WOW().init();
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        items: 2,
+        gap: 50,
+        autoplay: true,
+        autoplayTimeout: 3000,
+      });
+    });
+  </script>
+
 
 </body>
 

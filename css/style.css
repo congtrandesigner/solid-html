@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   width: 100%;
   max-width: 1170px;
@@ -903,6 +904,7 @@
   gap: 60px;
   align-items: center;
   width: 100%;
+  height: auto;
 }
 @media (min-width: 992px) {
   .two-column {
@@ -1030,9 +1032,30 @@
   animation: fadeInRight 1s ease-out both;
 }
 
+img.img-dark {
+  display: none; /* Ẩn ảnh tối đi */
+}
+
+img.img-light {
+  display: block; /* Hiện ảnh sáng */
+}
+
 /*=============================================
 =            Dark Theme
 =============================================*/
+[data-theme=dark] span.text-through::after {
+  position: absolute;
+  content: "";
+  background-color: #46495A;
+  opacity: 1;
+  z-index: -1;
+}
+[data-theme=dark] .img-light {
+  display: none !important; /* Ẩn ảnh sáng */
+}
+[data-theme=dark] .img-dark {
+  display: block !important; /* Hiện ảnh tối */
+}
 [data-theme=dark] .integration-number {
   background: #181C31;
   border-color: #1C2136;
@@ -1193,8 +1216,10 @@
 .trusted .trusted-content .content-box .stats-container .stat-item-three.animated {
   animation: fadeInDown 1s ease-out 0.8s both;
 }
-[data-theme=dark] .trusted h2,
-[data-theme=dark] .trusted h3 {
+[data-theme=dark] .trusted .div-bg-grid-bot {
+  background-color: #1C2136;
+}
+[data-theme=dark] .trusted .content-box .stats-container h3 {
   color: #ffffff;
 }
 [data-theme=dark] .trusted .img-arr {
@@ -1275,16 +1300,19 @@
   color: #1d2144;
 }
 
+.our-faqs {
+  padding-bottom: 80px;
+}
 .our-faqs .our-faqs-content {
   position: relative;
   display: flex;
   border-radius: 12px;
   width: 100%;
-  height: auto;
 }
 .our-faqs .our-faqs-content .two-column {
   position: absolute;
   z-index: 4;
+  overflow: hidden;
 }
 .our-faqs .our-faqs-content .two-column .our-faqs-title.animated {
   animation: fadeInLeft 1s ease-out both;
@@ -1298,14 +1326,9 @@
 .our-faqs .our-faqs-content .two-column .our-faqs-title .section-title h2 {
   font-size: 30px;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-title .btn-web {
-  color: black;
-}
-.our-faqs .our-faqs-content .two-column .our-faqs-title .btn-web:hover {
-  color: blue;
-}
 .our-faqs .our-faqs-content .two-column .our-faqs-items {
   text-align: right !important;
+  overflow: hidden;
 }
 .our-faqs .our-faqs-content .two-column .our-faqs-items.animated {
   animation: fadeInRight 1s ease-out both;
@@ -1347,15 +1370,44 @@
 .our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-body {
   text-align: left;
 }
-[data-theme=dark] .our-faqs .our-faqs-content {
-  background-color: #1C2136;
+
+[data-theme=dark] .our-faqs-content {
+  background-color: #181C31;
 }
-[data-theme=dark] .our-faqs .h2 {
+[data-theme=dark] .our-faqs-content .our-faqs-title .section-title p {
+  color: #ffffff !important;
+}
+[data-theme=dark] .our-faqs-content .our-faqs-title .section-title h2 {
   color: #ffffff;
 }
-[data-theme=dark] .our-faqs .bottom-integration-button button {
-  background-color: #ffffff;
-  color: #1d2144;
+[data-theme=dark] .our-faqs-content .our-faqs-items .accordion-item {
+  background-color: #1C2136 !important;
+  color: #ffffff !important;
+}
+[data-theme=dark] .our-faqs-content .our-faqs-items .accordion-item .accordion-button {
+  background-color: #1C2136 !important;
+  color: #ffffff !important;
+}
+
+.btn-web {
+  color: black;
+}
+
+.btn-web:hover {
+  color: #4a6cf7;
+}
+.btn-web:hover i {
+  animation: IntoRight 0.5s ease-out both;
+}
+
+[data-theme=dark] .btn-web {
+  color: #ffffff !important;
+}
+[data-theme=dark] .btn-web:hover {
+  color: #4a6cf7 !important;
+}
+[data-theme=dark] .btn-web:hover i {
+  animation: IntoRight 0.5s ease-out both;
 }
 
 .accordion-item {
@@ -1421,6 +1473,76 @@ span.text-through::after {
     transform: translateX(0);
   }
 }
+@keyframes IntoRight {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+}
+.testimonials .testimonials-content .testimonials-items {
+  padding-bottom: 30px;
+}
+.testimonials .testimonials-content .testimonials-items .testimonials-item {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: -5px 5px 10px rgba(216, 215, 215, 0.358);
+}
+.testimonials .testimonials-content .testimonials-items .testimonials-item .item-header {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonials .testimonials-content .testimonials-items .testimonials-item .item-header .item-header-title h3 {
+  color: #1d2144;
+}
+.testimonials .testimonials-content .testimonials-items.owl-carousel .owl-stage-outer {
+  padding: 15px 0;
+  /* Tạo không gian cho bóng đổ (box-shadow) nếu có */
+}
+.testimonials .testimonials-content .testimonials-items.owl-carousel .owl-item {
+  padding: 0 15px;
+  /* 15px trái + 15px phải = đúng 30px khoảng cách giữa các card */
+}
+.testimonials .testimonials-content {
+  /* Custom lại giao diện Dots */
+}
+.testimonials .testimonials-content .owl-theme .owl-dots {
+  margin-top: 40px !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 8px;
+  /* Khoảng cách giữa các chấm tròn */
+}
+.testimonials .testimonials-content .owl-theme .owl-dots .owl-dot span {
+  width: 10px !important;
+  height: 10px !important;
+  background: #e2e8f0 !important;
+  /* Màu xám mờ cho chấm chưa chọn */
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.testimonials .testimonials-content .owl-theme .owl-dots .owl-dot.active span, .testimonials .testimonials-content .owl-theme .owl-dots .owl-dot:hover span {
+  background: #007bff !important;
+  /* Đổi thành màu xanh dương sáng */
+  width: 25px !important;
+  /* Kéo dài nhẹ chấm active ra */
+  border-radius: 30px;
+}
+
+[data-theme=dark] .testimonials-items .testimonials-item {
+  border: 1px solid #b8b9c4;
+  background-color: #1C2136;
+  box-shadow: none !important;
+}
+[data-theme=dark] .testimonials-items .testimonials-item .item-header .item-header-title h3 {
+  color: #ffffff !important;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

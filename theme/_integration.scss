@@ -34,7 +34,6 @@
         border-radius: $radius;
 
     }
-
 }
 
 .integration-content {
@@ -159,12 +158,32 @@
 
                 } 
 
+img.img-dark {
+    display: none; /* Ẩn ảnh tối đi */
+}
+img.img-light {
+    display: block; /* Hiện ảnh sáng */
+}
 
 /*=============================================
 =            Dark Theme
 =============================================*/
 
 [data-theme="dark"] {
+    span.text-through::after{
+    position: absolute;
+    content: "";
+    background-color: #46495A;
+    opacity: 1;
+    z-index: -1;
+    }
+
+    .img-light {
+        display: none !important; /* Ẩn ảnh sáng */
+    }
+    .img-dark {
+        display: block !important; /* Hiện ảnh tối */
+    }
 
     .integration-number {
 
@@ -185,5 +204,6 @@
         }
 
     }
+
 
 }
