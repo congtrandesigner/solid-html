@@ -119,10 +119,10 @@
         }
     }
 
-
 [data-theme='dark'] & {
+   .trusted-content,
     .div-bg-grid-bot {
-            background-color: $color-border-dark;}
+            background-color: $color-border-dark ;}
 
   .content-box .stats-container h3 {
         color: $color-white;

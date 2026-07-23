@@ -1313,6 +1313,7 @@ img.img-light {
     width: 30%;
   }
 }
+[data-theme=dark] .trusted .trusted-content,
 [data-theme=dark] .trusted .div-bg-grid-bot {
   background-color: #1C2136;
 }
