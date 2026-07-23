@@ -1,15 +1,8 @@
 .contact {
-  position: relative;
   padding: 60px 0;
-  overflow: hidden;
-  background: linear-gradient(180deg, #eef2ff 0%, rgba(238, 242, 255, 0) 100%);
 
   @include breakpoint-up(lg) {
     padding: 100px 0;
-  }
-
-  [data-theme='dark'] & {
-    background: linear-gradient(180deg, $color-bg-dark 0%, rgba(23, 24, 38, 0) 100%);
   }
 }
 
@@ -42,12 +35,21 @@
 
 .contact-grid {
   position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
+  padding: 24px;
+  gap: 32px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #eef2ff 0%, rgba(238, 242, 255, 0) 100%);
 
   @include breakpoint-up(lg) {
     grid-template-columns: 1.4fr 1fr;
+    padding: 5rem;
+  }
+
+  [data-theme='dark'] & {
+    background: linear-gradient(180deg, $color-bg-dark 0%, rgba(23, 24, 38, 0) 100%);
   }
 }
 
@@ -63,8 +65,11 @@
 }
 
 .contact-form-box {
+  position: relative;
+  z-index: 1;
   padding: 40px;
   background-color: $color-white;
+  animation: feature-fade-in 0.6s ease both;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(29, 33, 68, 0.08);
 
@@ -182,6 +187,8 @@
 }
 
 .contact-info-box {
+  position: relative;
+  z-index: 1;
   padding: 40px;
 
   @include breakpoint-up(lg) {
