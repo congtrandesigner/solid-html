@@ -1102,10 +1102,8 @@ img.img-light {
   color: #ffffff;
 }
 
-@media (min-width: 768px) {
-  .funtional-content {
-    margin-left: 10px !important;
-  }
+.funtional-content {
+  margin: 10px !important;
 }
 .funtional-content .funtional-row.animated {
   animation: fadeInDown 1s ease-out 0.5s both;
@@ -1170,13 +1168,8 @@ img.img-light {
   border-radius: 4px 4px 0 0;
 }
 .funtional-content .funtional-row {
-  margin-top: 50px;
+  margin-top: 50px !important;
   margin: 15px;
-}
-@media (min-width: 768px) {
-  .funtional-content .funtional-row {
-    margin-top: 10px;
-  }
 }
 .funtional-content .funtional-row-img {
   display: none !important;

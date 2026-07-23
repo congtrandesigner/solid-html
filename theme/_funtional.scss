@@ -1,7 +1,7 @@
 .funtional-content {
-
+    margin: 10px !important;
     @include breakpoint-up(md) {
-        margin-left: 10px !important;
+        
     }
 
     .funtional-row {
@@ -74,13 +74,9 @@
     }
 
     .funtional-row {
-        margin-top: 50px;
+        margin-top: 50px !important;
         margin: 15px;
 
-        @include breakpoint-up(md) {
-            margin-top: 10px;
-
-        }
     }
 
     .funtional-row-img {
