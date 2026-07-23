@@ -1,5 +1,6 @@
 .trusted {
     padding-top: 50px;
+    margin-bottom: 50px;
 
     .trusted-content {
         position: relative;
@@ -9,9 +10,9 @@
         align-items: center;
         min-height: 500px;
         border-radius: 12px;
-
+        background-color: #E1E9FF;
         .div-bg-grid-bot {
-            background-color: #E1E9FF;
+            
             border-radius: $radius;
 
             .img-bg-grid-top {
@@ -30,17 +31,21 @@
 
         .img-character {
             position: absolute;
-            top: -10px;
-            left: 40px;
-            width: 220px;
+            top: -15%;
+            left: -15%;
+            width: 300px;
             z-index: 3;
+            @include breakpoint-up(md){
+                top: -20px;
+            left: -20px;
+            }
 
         }
 
         .img-wave {
             position: absolute;
-            bottom: 40px;
-            right: 40px;
+            bottom: 5px;
+            right: 10px;
             width: 150px;
             z-index: 3;
         }
@@ -65,11 +70,14 @@
             }
 
             .stats-container {
+
+                width: 100%;
                 display: flex;
-                justify-content: space-around;
+                flex-wrap: wrap;
+                justify-content: center;
                 margin-top: 50px;
                 gap: 30px;
-
+                
                 h3 {
                     color: $color-heading;
                     font-weight: $font-weight-semibold;
@@ -81,22 +89,31 @@
                 }
 
                 .stat-item-one {
+                    width: 40%;
                     &.animated {
                         animation: fadeInDown 1s ease-out 0.4s both;
                     }
                 }
 
                 .stat-item-two {
+                    width: 40%;
                     &.animated {
                         animation: fadeInDown 1s ease-out 0.6s both;
                     }
                 }
 
                 .stat-item-three {
+                    width: 50%;
                     &.animated {
                         animation: fadeInDown 1s ease-out 0.8s both;
                     }
                 }
+
+                 @include breakpoint-up(md)  {
+         .stat-item-one, .stat-item-two, .stat-item-three {
+            width: 30%;
+         }
+    }
 
             }
         }

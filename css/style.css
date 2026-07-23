@@ -1215,6 +1215,7 @@ img.img-light {
 
 .trusted {
   padding-top: 50px;
+  margin-bottom: 50px;
 }
 .trusted .trusted-content {
   position: relative;
@@ -1224,9 +1225,9 @@ img.img-light {
   align-items: center;
   min-height: 500px;
   border-radius: 12px;
+  background-color: #E1E9FF;
 }
 .trusted .trusted-content .div-bg-grid-bot {
-  background-color: #E1E9FF;
   border-radius: 6px;
 }
 .trusted .trusted-content .div-bg-grid-bot .img-bg-grid-top {
@@ -1242,15 +1243,21 @@ img.img-light {
 }
 .trusted .trusted-content .img-character {
   position: absolute;
-  top: -10px;
-  left: 40px;
-  width: 220px;
+  top: -15%;
+  left: -15%;
+  width: 300px;
   z-index: 3;
+}
+@media (min-width: 768px) {
+  .trusted .trusted-content .img-character {
+    top: -20px;
+    left: -20px;
+  }
 }
 .trusted .trusted-content .img-wave {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 5px;
+  right: 10px;
   width: 150px;
   z-index: 3;
 }
@@ -1268,8 +1275,10 @@ img.img-light {
   animation: fadeInDown 1s ease-out 0.3s both;
 }
 .trusted .trusted-content .content-box .stats-container {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: 50px;
   gap: 30px;
 }
@@ -1281,14 +1290,28 @@ img.img-light {
   color: #637381;
   font-size: 1rem;
 }
+.trusted .trusted-content .content-box .stats-container .stat-item-one {
+  width: 40%;
+}
 .trusted .trusted-content .content-box .stats-container .stat-item-one.animated {
   animation: fadeInDown 1s ease-out 0.4s both;
+}
+.trusted .trusted-content .content-box .stats-container .stat-item-two {
+  width: 40%;
 }
 .trusted .trusted-content .content-box .stats-container .stat-item-two.animated {
   animation: fadeInDown 1s ease-out 0.6s both;
 }
+.trusted .trusted-content .content-box .stats-container .stat-item-three {
+  width: 50%;
+}
 .trusted .trusted-content .content-box .stats-container .stat-item-three.animated {
   animation: fadeInDown 1s ease-out 0.8s both;
+}
+@media (min-width: 768px) {
+  .trusted .trusted-content .content-box .stats-container .stat-item-one, .trusted .trusted-content .content-box .stats-container .stat-item-two, .trusted .trusted-content .content-box .stats-container .stat-item-three {
+    width: 30%;
+  }
 }
 [data-theme=dark] .trusted .div-bg-grid-bot {
   background-color: #1C2136;
