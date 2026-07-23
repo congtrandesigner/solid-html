@@ -5,10 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solid - SaaS Boilerplate</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Bootstrap CSS v5.3.8 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <!-- Line Awesome -->
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <!-- CAROUSEL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    integrity="sha512-OTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -74,7 +90,7 @@
           <span class="hero-badge">🔥 Solid - A Complete SaaS Starter Template for SaaS</span>
           <h1 class="hero-title">
             Robust SaaS Boilerplate and
-            Starter for <span class="hero-title-highlight">Next.js</span>
+            Starter for <span class="text-through">Next.js</span>
           </h1>
           <p class="hero-desc">
             Packed with all the key integrations you need for swift SaaS startup launch, including
@@ -205,12 +221,13 @@
 
   <!-- Integration Section -->
 
-  <section class="integration-top">
+  <section class="integration-One">
     <div class="container">
       <div class=" two-column">
         <!-- Image -->
-        <div class="integration-image two-column__image">
-          <img src="/images/about-light-01.webp" alt="Integration Image">
+        <div class="integration-image two-column__image wow">
+          <img src="images/about-dark-01.webp" alt="Integration Image" class="img-dark">
+          <img src="images/about-light-01.webp" alt="Integration Image" class="img-light">
         </div>
         <!-- Content -->
         <div class="integration-content two-column__content wow">
@@ -219,18 +236,15 @@
             <p><span class="section-title-eyebrow">
                 NEW
               </span>SaaS Boilerplate for Next.js</p>
-
             <h2 class="section-title-heading">
               A Complete Solution for
-              SaaS Startup
+              <span class="text-through">SaaS Startup</span>
             </h2>
-
             <p class="section-title-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               In convallis tortor eros. Donec vitae tortor lacus.
               Phasellus aliquam ante in maximus.
             </p>
-
           </div>
 
           <div class="integration-list">
@@ -289,71 +303,48 @@
     </div>
   </section>
 
-  <!-- .integration-bot Section -->
-
-
-  <section class="integration-bot">
-
+  <section class="integration-Two">
     <div class="container">
-
       <div class="two-column two-column--reverse">
-
         <!-- Content -->
-
-        <div class=".integration-bot-content two-column__content">
-
+        <div class="integration-Two-title two-column__content wow ">
           <div class="section-title">
-
-            <p class="section-title-eyebrow">
+            <p class="">
               LAUNCH YOUR SAAS FAST
             </p>
-
             <h2 class="section-title-heading">
-              Packed with All Essential Integrations
+              Packed with All Essential <span class="text-through">Integrations</span>
             </h2>
-
             <p class="section-title-desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               In convallis tortor eros. Donec vitae tortor lacus.
               Phasellus aliquam ante in maximus.
             </p>
-
           </div>
-
-          <a href="#" class="btn btn-primary">
-
-            Know More
-
+          <a href="#" class="btn-web">
+            Know More <i class="las la-arrow-right ms-2"></i>
           </a>
-
         </div>
-
         <!-- Image -->
-
-        <div class=".integration-bot-image two-column__image">
-
-          <img src="./images/about-light-02.svg" alt="Dashboard Preview">
-
+        <div class="integration-Two-image two-column__image wow">
+          <img src="./images/about-light-02.svg" alt="Dashboard Preview" class="img-light">
+          <img src="images/about-dark-02.svg" alt="Dashboard Preview" class="img-dark">
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <section class="funtional">
     <div class="container">
       <div class="funtional-content">
         <nav>
-          <div class="funtional-tabs nav">
+          <div class="funtional-tabs nav wow">
             <div class="funtional-nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home">
               <div class="funtional-number">
                 01
               </div>
               <span class="">Clean User Interface</span>
             </div>
-
             <div class="funtional-nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile">
               <div class="funtional-number">
                 02
@@ -366,8 +357,8 @@
             </div>
           </div>
         </nav>
-        <div class="row">
-          <div class="col-md-6">
+        <div class="funtional-row row wow">
+          <div class="col-md-6 ">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-home">
                 <div class="funtional-title">
@@ -882,6 +873,57 @@
     </div>
   </section>
 
+  <section class="blog">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-title-eyebrow">NEWS &amp; BLOGS</span>
+        <h2 class="section-title-heading">Latest News &amp; Blogs</h2>
+        <p class="section-title-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+
+      <div class="blog-items">
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/9e6b67ab379a182243ac521db056e96918ff1b5d-1000x667.webp" alt="Exploring MERN Stack: Powering Modern Web Apps" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">Exploring MERN Stack: Powering Modern Web Apps</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            In the world of web development, staying ahead of the curve is crucial. One technology stack that has...
+          </p>
+        </div>
+
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/b34fca863dc4efa821da4e71328ec9718ab14062-970x440.webp" alt="Best UI components for modern websites" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">Best UI components for modern websites</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/f492eebba9742b0c8c71dd541bd123cdd4fe2130-970x440.webp" alt="The Power of UI/UX: Elevating Digital Experiences" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">The Power of UI/UX: Elevating Digital Experiences</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -913,7 +955,7 @@
             <li><a href="about.html">Company</a></li>
             <li><a href="press.html">Press media</a></li>
             <li><a href="blog.html">Our Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
           </ul>
         </div>
 
@@ -948,6 +990,9 @@
             </a>
             <a href="#" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Behance">
+              <i class="fa-brands fa-behance"></i>
             </a>
           </div>
           <a href="#header" class="footer-top-btn" aria-label="Back to top">
@@ -991,6 +1036,38 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- WOW.JS -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- CAROUSEL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      new WOW().init();
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        items: 2,
+        gap: 50,
+        autoplay: true,
+        autoplayTimeout: 3000,
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>

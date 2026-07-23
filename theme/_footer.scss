@@ -215,10 +215,8 @@
 
   p {
     font-size: $fs-small;
-    order: -1;
 
     @include breakpoint-up(md) {
-      order: 0;
       text-align: center;
     }
   }

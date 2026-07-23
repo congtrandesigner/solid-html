@@ -1,0 +1,97 @@
+.testimonials {
+    .testimonials-content {
+        .section-title {}
+
+        .testimonials-items {
+            padding-bottom: 30px;
+
+            .testimonials-item {
+                border: 1px solid transparent;
+                border-radius: 8px;
+                padding: 50px;
+                box-shadow: -5px 5px 10px rgba(216, 215, 215, 0.358);
+
+                .item-header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .item-header-title {
+                        h3 {
+                            color: $color-heading;
+                        }
+
+                        p {}
+                    }
+
+                    .img-item {}
+                }
+            }
+        }
+
+        .testimonials-items.owl-carousel {
+            .owl-stage-outer {
+                padding: 15px 0;
+                /* Tạo không gian cho bóng đổ (box-shadow) nếu có */
+            }
+
+            .owl-item {
+                padding: 0 15px;
+                /* 15px trái + 15px phải = đúng 30px khoảng cách giữa các card */
+            }
+        }
+
+        /* Custom lại giao diện Dots */
+        .owl-theme {
+            .owl-dots {
+                margin-top: 40px !important;
+                display: flex !important;
+                justify-content: center;
+                gap: 8px;
+                /* Khoảng cách giữa các chấm tròn */
+
+                .owl-dot {
+                    span {
+                        width: 10px !important;
+                        height: 10px !important;
+                        background: #e2e8f0 !important;
+                        /* Màu xám mờ cho chấm chưa chọn */
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: all 0.3s ease;
+                    }
+
+                    // Chấm đang active (được chọn)
+                    &.active span,
+                    &:hover span {
+                        background: #007bff !important;
+                        /* Đổi thành màu xanh dương sáng */
+                        width: 25px !important;
+                        /* Kéo dài nhẹ chấm active ra */
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .testimonials-items {
+
+        .testimonials-item {
+            border: 1px solid $color-text-dark;
+            background-color: $color-border-dark;
+            box-shadow: none !important;
+
+            .item-header {
+                .item-header-title {
+                    h3 {
+                        color: $color-white !important;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

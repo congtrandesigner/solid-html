@@ -36,7 +36,7 @@
             cursor: pointer;
             width: 100%;
             border: 1px solid $color-border;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+
             border-radius: 5px;
             margin-left: 10px;
 
@@ -94,7 +94,6 @@
     .funtional-title {
         text-align: left;
 
-
         .funtional-title-heading {
             font-size: 30px;
             font-weight: $font-weight-semibold;
@@ -106,7 +105,7 @@
 
 [data-theme="dark"] {
 
-    .funtional-tabs{
+    .funtional-tabs {
         background-color: $color-bg-dark;
         border: 1px solid $color-border-dark !important;
 
@@ -116,12 +115,11 @@
         }
 
         .funtional-number {
-             background-color: $color-bg-dark;
-            border:1px solid $color-border-dark!important;
+            background-color: $color-bg-dark;
+            border: 1px solid $color-border-dark !important;
             color: $color-white !important;
         }
     }
-
 
     .funtional-title {
 
@@ -134,3 +132,4 @@
     }
 
 }
+
