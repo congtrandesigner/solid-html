@@ -1,4 +1,5 @@
 .integration-last {
+    margin: 10px;
     .integration-last-content {
         position: relative;
         padding: 80px 20px;
@@ -48,19 +49,33 @@
 
 .bottom-integration {
     padding: 60px 0;
-
+   
+    
     .bottom-integration-content {
         background-color: #f0f4ff;
         border-radius: 16px;
         align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
 
         .bottom-integration-title {
+             @include breakpoint-up(md)  {
+        width: 70% !important;
+    }
+            width: 100%;
             &.animated {
                     animation: fadeInLeft 1s ease-out both;
                 }
         }
 
         .bottom-integration-button {
+             @include breakpoint-up(md)  {
+        width: 30% !important;
+        text-align: end;
+    }
+            width: 100%;
              &.animated {
                     animation: fadeInRight 1s ease-out both;
                 }

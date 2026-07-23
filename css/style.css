@@ -1324,6 +1324,9 @@ img.img-light {
   box-shadow: none;
 }
 
+.integration-last {
+  margin: 10px;
+}
 .integration-last .integration-last-content {
   position: relative;
   padding: 80px 20px;
@@ -1369,9 +1372,30 @@ img.img-light {
   background-color: #f0f4ff;
   border-radius: 16px;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .bottom-integration .bottom-integration-content .bottom-integration-title {
+    width: 70% !important;
+  }
+}
+.bottom-integration .bottom-integration-content .bottom-integration-title {
+  width: 100%;
 }
 .bottom-integration .bottom-integration-content .bottom-integration-title.animated {
   animation: fadeInLeft 1s ease-out both;
+}
+@media (min-width: 768px) {
+  .bottom-integration .bottom-integration-content .bottom-integration-button {
+    width: 30% !important;
+    text-align: end;
+  }
+}
+.bottom-integration .bottom-integration-content .bottom-integration-button {
+  width: 100%;
 }
 .bottom-integration .bottom-integration-content .bottom-integration-button.animated {
   animation: fadeInRight 1s ease-out both;
