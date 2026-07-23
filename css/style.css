@@ -943,13 +943,21 @@ span.text-through::after {
   width: 100%;
   height: auto;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .two-column {
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
   }
 }
 
+.two-column__image {
+  display: none;
+}
+@media (min-width: 768px) {
+  .two-column__image {
+    display: block;
+  }
+}
 .two-column__image img {
   width: 100%;
   display: block;
@@ -977,7 +985,7 @@ span.text-through::after {
 =            Integration Section
 ================================================*/
 .integration-One, .integration-Two {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 @media (min-width: 768px) {
   .integration-One, .integration-Two {
@@ -999,11 +1007,11 @@ span.text-through::after {
   border-radius: 6px;
 }
 
+.integration-content .section-title {
+  text-align: left;
+}
 .integration-content.animated {
   animation: fadeInRight 1s ease-out both;
-}
-.integration-content {
-  width: 100%;
 }
 .integration-content span.text-through::after {
   background-color: #ADFFF8;

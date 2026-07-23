@@ -4,7 +4,7 @@
 
 .integration-One,.integration-Two {
 
-    padding: 100px 0;
+    padding: 40px 0;
 
     @include breakpoint-up(md)  {
         padding: 80px 0;
@@ -20,7 +20,6 @@
 
 
 .integration-image {
-
      &.animated {
                     animation: fadeInLeft 1s ease-out both;
 
@@ -37,12 +36,14 @@
 }
 
 .integration-content {
+    .section-title {
+        text-align: left;
+    }
      &.animated {
                     animation: fadeInRight 1s ease-out both;
 
                 }
 
-    width: 100%;
     span.text-through::after{
         background-color: #ADFFF8;
     }
