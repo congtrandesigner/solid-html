@@ -2,14 +2,14 @@
   position: relative;
   padding: 60px 0;
   overflow: hidden;
-  background-color: #eef2ff;
+  background: linear-gradient(180deg, #eef2ff 0%, rgba(238, 242, 255, 0) 100%);
 
   @include breakpoint-up(lg) {
     padding: 100px 0;
   }
 
   [data-theme='dark'] & {
-    background-color: $color-bg-dark;
+    background: linear-gradient(180deg, $color-bg-dark 0%, rgba(23, 24, 38, 0) 100%);
   }
 }
 

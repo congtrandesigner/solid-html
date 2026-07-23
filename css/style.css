@@ -1719,7 +1719,7 @@ img.img-light {
   position: relative;
   padding: 60px 0;
   overflow: hidden;
-  background-color: #eef2ff;
+  background: linear-gradient(180deg, #eef2ff 0%, rgba(238, 242, 255, 0) 100%);
 }
 @media (min-width: 992px) {
   .contact {
@@ -1727,7 +1727,7 @@ img.img-light {
   }
 }
 [data-theme=dark] .contact {
-  background-color: #181C31;
+  background: linear-gradient(180deg, #181C31 0%, rgba(23, 24, 38, 0) 100%);
 }
 
 .contact-bg {
