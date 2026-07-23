@@ -1,5 +1,7 @@
 .our-faqs {
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
+    margin: 15px;
+
 
     .our-faqs-content {
         position: relative;
@@ -7,12 +9,19 @@
         border-radius: 12px;
         width: 100%;
 
-        .two-column {
-            position: absolute;
-            z-index: 4;
+        .our-faqs-two-column {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            position: relative;
             overflow: hidden;
 
             .our-faqs-title {
+                padding: 20px;
+                width: 40%;
+                @include breakpoint-up(md)  {
+        width: 50%;
+    }
                 &.animated {
                     animation: fadeInLeft 1s ease-out both;
                 }
@@ -34,18 +43,19 @@
             .our-faqs-items {
                 text-align: right !important;
                 overflow: hidden;
-
+                width: 100%;
+                @include breakpoint-up(md)  {
+        width: 50%;
+    }
                 &.animated {
                     animation: fadeInRight 1s ease-out both;
                 }
 
                 .accordion-item {
-                    margin-bottom: 3px;
                     border-radius: 5px;
 
                     .accordion-header {
                         h2 {
-                            font-size: 16px;
                         }
 
                         .accordion-button::after {
@@ -128,6 +138,5 @@
 
 
 .accordion-item {
-    padding: 15px 0;
     border-bottom: 1px solid #e9ecef !important;
 }

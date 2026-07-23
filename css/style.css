@@ -1422,7 +1422,8 @@ img.img-light {
 }
 
 .our-faqs {
-  padding-bottom: 80px;
+  padding-bottom: 5rem;
+  margin: 15px;
 }
 .our-faqs .our-faqs-content {
   position: relative;
@@ -1430,65 +1431,78 @@ img.img-light {
   border-radius: 12px;
   width: 100%;
 }
-.our-faqs .our-faqs-content .two-column {
-  position: absolute;
-  z-index: 4;
+.our-faqs .our-faqs-content .our-faqs-two-column {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
   overflow: hidden;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-title.animated {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title {
+  padding: 20px;
+  width: 40%;
+}
+@media (min-width: 768px) {
+  .our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title {
+    width: 50%;
+  }
+}
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title.animated {
   animation: fadeInLeft 1s ease-out both;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-title .section-title {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title .section-title {
   text-align: left !important;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-title .section-title p {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title .section-title p {
   color: #181C31;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-title .section-title h2 {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-title .section-title h2 {
   font-size: 30px;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items {
   text-align: right !important;
   overflow: hidden;
+  width: 100%;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items.animated {
+@media (min-width: 768px) {
+  .our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items {
+    width: 50%;
+  }
+}
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items.animated {
   animation: fadeInRight 1s ease-out both;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item {
-  margin-bottom: 3px;
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item {
   border-radius: 5px;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header h2 {
-  font-size: 16px;
-}
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button::after {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button::after {
   display: none !important;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent !important;
   color: inherit !important;
   box-shadow: none !important;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button:focus {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button:focus {
   box-shadow: none !important;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button .icon-open {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button .icon-open {
   display: none;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button .icon-close {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button .icon-close {
   display: inline-block;
   font-size: 1.5rem;
   font-weight: 700;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button.collapsed .icon-open {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button.collapsed .icon-open {
   display: inline-block;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-header .accordion-button.collapsed .icon-close {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-header .accordion-button.collapsed .icon-close {
   display: none;
 }
-.our-faqs .our-faqs-content .two-column .our-faqs-items .accordion-item .accordion-body {
+.our-faqs .our-faqs-content .our-faqs-two-column .our-faqs-items .accordion-item .accordion-body {
   text-align: left;
 }
 
@@ -1511,7 +1525,6 @@ img.img-light {
 }
 
 .accordion-item {
-  padding: 15px 0;
   border-bottom: 1px solid #e9ecef !important;
 }
 
