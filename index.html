@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solid - SaaS Boilerplate</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Bootstrap CSS v5.3.8 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -805,6 +809,121 @@
       </div>
     </div>
   </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-bg">
+          <img class="img-light" src="images/shape-dotted-light-02.svg" alt="" />
+          <img class="img-dark" src="images/shape-dotted-dark-02.svg" alt="" />
+        </div>
+        <div class="contact-form-box">
+          <h2 class="contact-heading">Send a message</h2>
+          <form class="contact-form">
+            <div class="contact-form-row">
+              <div class="contact-form-group">
+                <input type="text" placeholder="Full name" required />
+              </div>
+              <div class="contact-form-group">
+                <input type="email" placeholder="Email address" required />
+              </div>
+            </div>
+            <div class="contact-form-row">
+              <div class="contact-form-group">
+                <input type="text" placeholder="Subject" required />
+              </div>
+              <div class="contact-form-group">
+                <input type="tel" placeholder="Phone number" />
+              </div>
+            </div>
+            <div class="contact-form-group contact-form-group-full">
+              <textarea rows="5" placeholder="Message" required></textarea>
+            </div>
+            <div class="contact-form-footer">
+              <label class="contact-checkbox">
+                <input type="checkbox" required />
+                <span>By clicking Checkbox, you agree to use our "Form" terms And consent cookie usage in browser.</span>
+              </label>
+              <button type="submit" class="contact-submit">
+                Send Message <i class="la la-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info-box">
+          <h2 class="contact-heading">Find us</h2>
+
+          <div class="contact-info-item">
+            <h4>Our Location</h4>
+            <p>290 Maryam Springs 260, Courbevoie, Paris, France</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>Email Address</h4>
+            <p>yourmail@domainname.com</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h4>Phone Number</h4>
+            <p>+009 42334 6343 843</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <div class="section-title">
+        <span class="section-title-eyebrow">NEWS &amp; BLOGS</span>
+        <h2 class="section-title-heading">Latest News &amp; Blogs</h2>
+        <p class="section-title-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros.
+          Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+        </p>
+      </div>
+
+      <div class="blog-items">
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/9e6b67ab379a182243ac521db056e96918ff1b5d-1000x667.webp" alt="Exploring MERN Stack: Powering Modern Web Apps" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">Exploring MERN Stack: Powering Modern Web Apps</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            In the world of web development, staying ahead of the curve is crucial. One technology stack that has...
+          </p>
+        </div>
+
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/b34fca863dc4efa821da4e71328ec9718ab14062-970x440.webp" alt="Best UI components for modern websites" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">Best UI components for modern websites</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+
+        <div class="blog-item">
+          <div class="blog-item-image">
+            <img src="images/f492eebba9742b0c8c71dd541bd123cdd4fe2130-970x440.webp" alt="The Power of UI/UX: Elevating Digital Experiences" />
+          </div>
+          <h3 class="blog-item-title">
+            <a href="blog.html">The Power of UI/UX: Elevating Digital Experiences</a>
+          </h3>
+          <p class="blog-item-excerpt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -836,7 +955,7 @@
             <li><a href="about.html">Company</a></li>
             <li><a href="press.html">Press media</a></li>
             <li><a href="blog.html">Our Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
           </ul>
         </div>
 
@@ -871,6 +990,9 @@
             </a>
             <a href="#" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" aria-label="Behance">
+              <i class="fa-brands fa-behance"></i>
             </a>
           </div>
           <a href="#header" class="footer-top-btn" aria-label="Back to top">
