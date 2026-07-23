@@ -1020,27 +1020,51 @@
   color: #ffffff;
 }
 
+@media (min-width: 768px) {
+  .funtional-content {
+    margin-left: 10px !important;
+  }
+}
+.funtional-content .funtional-row.animated {
+  animation: fadeInDown 1s ease-out 0.5s both;
+}
 .funtional-content .funtional-tabs {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.funtional-content .funtional-tabs.animated {
+  animation: fadeInDown 1s ease-out both;
+}
+.funtional-content .funtional-tabs {
   background-color: #ffffff;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   padding: 10px 0;
-  width: 100%;
-  margin: 40px auto;
   border-color: 1px solid #ffffff;
 }
 .funtional-content .funtional-tabs .funtional-nav-link {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex: 1;
+  padding: 10px 20px;
+  gap: 2px;
   position: relative;
   font-weight: 500;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  margin-left: 10px;
+}
+@media (min-width: 768px) {
+  .funtional-content .funtional-tabs .funtional-nav-link {
+    width: calc(33.333% - 16px);
+    border: 1px solid transparent;
+  }
 }
 .funtional-content .funtional-tabs .funtional-nav-link .funtional-number {
   width: 46px;
@@ -1057,12 +1081,29 @@
 .funtional-content .funtional-tabs .funtional-nav-link.active::after {
   content: "";
   position: absolute;
-  bottom: -10px;
-  left: 15%;
-  width: 70%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: 4px;
   background-color: #007bff;
   border-radius: 4px 4px 0 0;
+}
+.funtional-content .funtional-row {
+  margin-top: 50px;
+  margin: 15px;
+}
+@media (min-width: 768px) {
+  .funtional-content .funtional-row {
+    margin-top: 10px;
+  }
+}
+.funtional-content .funtional-row-img {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .funtional-content .funtional-row-img {
+    display: block !important;
+  }
 }
 .funtional-content .funtional-title {
   text-align: left;
@@ -1075,6 +1116,10 @@
 
 [data-theme=dark] .funtional-tabs {
   background-color: #171826;
+  border: 1px solid #1a1f35 !important;
+}
+[data-theme=dark] .funtional-tabs .funtional-nav-link {
+  background-color: #1C2136;
   border: 1px solid #1a1f35 !important;
 }
 [data-theme=dark] .funtional-tabs .funtional-number {

@@ -1,52 +1,101 @@
-.funtional-content{
-.funtional-tabs {
-    @include flex(space-around, center);
-    background-color:$color-white;
-    border-radius: $radius;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    padding: 10px 0;
-    width: 100%;
-    margin: 40px auto;
-    border-color: 1px solid $color-white;
-   
-    .funtional-nav-link {
-        @include flex(center, center);
-        flex: 1;
-        position: relative;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        .funtional-number {
-            width: 46px;
-            height: 46px;
-            line-height: 46px;
-            text-align: center;
-            border: 1px solid $color-border;
-            border-radius: 50%;
-            margin-right: 15px;
-            font-size: 16px;
-            font-weight: 600;
-            color: $color-heading;
-        }
-        &.active::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 15%;
-        width: 70%;
-        height: 4px;
-        background-color: #007bff;
-        border-radius: 4px 4px 0 0;
-    }
+.funtional-content {
+
+    @include breakpoint-up(md) {
+        margin-left: 10px !important;
     }
 
-    
-    
-  
-}
-.funtional-title{
+    .funtional-row {
+        &.animated {
+            animation: fadeInDown 1s ease-out 0.5s both;
+        }
+    }
+
+    .funtional-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        &.animated {
+            animation: fadeInDown 1s ease-out both;
+        }
+
+        background-color:$color-white;
+        border-radius: $radius;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        padding: 10px 0;
+        border-color: 1px solid $color-white;
+
+        .funtional-nav-link {
+            width: 100%;
+            @include flex(flex-start, center);
+            padding: 10px 20px;
+            gap: 2px;
+            position: relative;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            border: 1px solid $color-border;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border-radius: 5px;
+            margin-left: 10px;
+
+            @include breakpoint-up(md) {
+                width: calc(33.333% - 16px);
+                border: 1px solid transparent;
+
+            }
+
+            .funtional-number {
+                width: 46px;
+                height: 46px;
+                line-height: 46px;
+                text-align: center;
+                border: 1px solid $color-border;
+                border-radius: 50%;
+                margin-right: 15px;
+                font-size: 16px;
+                font-weight: 600;
+                color: $color-heading;
+            }
+
+            &.active::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #007bff;
+                border-radius: 4px 4px 0 0;
+            }
+        }
+
+    }
+
+    .funtional-row {
+        margin-top: 50px;
+        margin: 15px;
+
+        @include breakpoint-up(md) {
+            margin-top: 10px;
+
+        }
+    }
+
+    .funtional-row-img {
+        display: none !important;
+
+        @include breakpoint-up(md) {
+            display: block !important;
+        }
+    }
+
+    .funtional-title {
         text-align: left;
-        .funtional-title-heading{
+
+
+        .funtional-title-heading {
             font-size: 30px;
             font-weight: $font-weight-semibold;
             color: $color-heading;
@@ -59,7 +108,13 @@
 
     .funtional-tabs{
         background-color: $color-bg-dark;
-        border:1px solid $color-border-dark !important;
+        border: 1px solid $color-border-dark !important;
+
+        .funtional-nav-link {
+            background-color: #1C2136;
+            border: 1px solid $color-border-dark !important;
+        }
+
         .funtional-number {
              background-color: $color-bg-dark;
             border:1px solid $color-border-dark!important;
