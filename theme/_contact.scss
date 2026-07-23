@@ -2,9 +2,14 @@
   position: relative;
   padding: 60px 0;
   overflow: hidden;
+  background-color: #eef2ff;
 
   @include breakpoint-up(lg) {
     padding: 100px 0;
+  }
+
+  [data-theme='dark'] & {
+    background-color: $color-bg-dark;
   }
 }
 

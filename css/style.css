@@ -1719,11 +1719,15 @@ img.img-light {
   position: relative;
   padding: 60px 0;
   overflow: hidden;
+  background-color: #eef2ff;
 }
 @media (min-width: 992px) {
   .contact {
     padding: 100px 0;
   }
+}
+[data-theme=dark] .contact {
+  background-color: #181C31;
 }
 
 .contact-bg {
